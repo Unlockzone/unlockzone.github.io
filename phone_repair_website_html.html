@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OneService — Ремонт телефонов</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .zoom:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-black text-white font-sans">
+  <header class="bg-gray-900 p-6 shadow-lg">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <h1 class="text-3xl font-bold text-green-400">OneService</h1>
+      <a href="#form" class="text-white border border-green-400 px-4 py-2 rounded hover:bg-green-600 hover:text-white">Записаться</a>
+    </div>
+  </header>
+
+  <main class="py-16 px-4 md:px-12 max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-green-400">Профессиональный ремонт телефонов</h2>
+      <p class="text-gray-300 text-lg">Быстро, качественно и с гарантией. Мы восстанавливаем телефоны всех брендов.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-16">
+      <img src="https://images.unsplash.com/photo-1580910051071-1700c77bf00e?auto=format&fit=crop&w=800&q=80" alt="Разблокировка iPhone" class="w-full h-auto object-cover rounded-xl shadow-md zoom" />
+      <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=800&q=80" alt="Ремонт Face ID" class="w-full h-auto object-cover rounded-xl shadow-md zoom" />
+      <img src="https://images.unsplash.com/photo-1606813904603-9f32f623fdf4?auto=format&fit=crop&w=800&q=80" alt="Прошивка телефона" class="w-full h-auto object-cover rounded-xl shadow-md zoom" />
+      <img src="https://images.unsplash.com/photo-1616001808466-b7e3f72b6d6c?auto=format&fit=crop&w=800&q=80" alt="Ремонт микросхем" class="w-full h-auto object-cover rounded-xl shadow-md zoom" />
+      <img src="https://images.unsplash.com/photo-1625837688954-174ba3fc5c96?auto=format&fit=crop&w=800&q=80" alt="Замена платы" class="w-full h-auto object-cover rounded-xl shadow-md zoom" />
+      <img src="https://images.unsplash.com/photo-1624885934131-fb4051132ca3?auto=format&fit=crop&w=800&q=80" alt="Диагностика ИИ" class="w-full h-auto object-cover rounded-xl shadow-md zoom" />
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-gray-800 text-white shadow-md p-6 text-center rounded-xl">
+        <div class="text-green-400 text-4xl mb-4">🔧</div>
+        <h3 class="text-xl font-semibold mb-2">Ремонт любой сложности</h3>
+        <p class="text-gray-400">От замены экрана до сложной пайки – справимся с любой задачей.</p>
+      </div>
+
+      <div class="bg-gray-800 text-white shadow-md p-6 text-center rounded-xl">
+        <div class="text-green-400 text-4xl mb-4">✅</div>
+        <h3 class="text-xl font-semibold mb-2">Гарантия на все работы</h3>
+        <p class="text-gray-400">Мы предоставляем гарантию до 6 месяцев на все виды ремонта.</p>
+      </div>
+
+      <div class="bg-gray-800 text-white shadow-md p-6 text-center rounded-xl">
+        <div class="text-green-400 text-4xl mb-4">📱</div>
+        <h3 class="text-xl font-semibold mb-2">Бесплатная диагностика</h3>
+        <p class="text-gray-400">Мы определим проблему бесплатно и предложим оптимальное решение.</p>
+      </div>
+    </div>
+
+    <div class="mt-20 text-center">
+      <h3 class="text-3xl font-bold text-green-400 mb-8">Онлайн-запись</h3>
+      <form id="form" class="max-w-2xl mx-auto bg-gray-800 p-8 rounded-xl shadow-lg space-y-6">
+        <div>
+          <label class="block text-gray-300 mb-2">Имя</label>
+          <input type="text" name="name" class="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none" placeholder="Ваше имя" required />
+        </div>
+        <div>
+          <label class="block text-gray-300 mb-2">Телефон</label>
+          <input type="tel" name="phone" class="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none" placeholder="+7 (___) ___-__-__" required />
+        </div>
+        <div>
+          <label class="block text-gray-300 mb-2">Сообщение</label>
+          <textarea name="message" class="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none" rows="4" placeholder="Что нужно отремонтировать?"></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="bg-green-500 text-white px-6 py-3 rounded hover:bg-green-600">Отправить заявку</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="text-center mt-16">
+      <a href="#form" class="bg-green-500 text-white px-8 py-4 text-lg rounded hover:bg-green-600">Связаться с нами</a>
+    </div>
+  </main>
+
+  <footer class="bg-gray-900 p-6 mt-16 text-center text-gray-500">
+    © 2025 OneService — Все права защищены.
+  </footer>
+</body>
+</html>
+
